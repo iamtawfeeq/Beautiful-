@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alisha ji ✦ ماشاءاللہ</title>
+<meta name="theme-color" content="#14142e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Noto+Nastaliq+Urdu:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --night:#14142e; --deep:#1e1b4b; --emerald:#0f6b61; --emerald2:#14897b;
+  --gold:#e8c36a; --rose:#f4a9bb; --pearl:#fff3ee; --ink:#2a1b3d;
+}
+*{box-sizing:border-box;margin:0}
+html,body{min-height:100%}
+body{
+  background:radial-gradient(ellipse at 50% 0%,#2d2a6e 0%,var(--deep) 40%,var(--night) 100%) fixed;
+  color:var(--pearl);font-family:"Cormorant Garamond",Georgia,serif;
+  display:flex;flex-direction:column;align-items:center;
+  padding:28px 18px 40px;overflow-x:hidden;min-height:100vh;
+}
+.stars{position:fixed;inset:0;pointer-events:none;z-index:0}
+.stars i{position:absolute;width:3px;height:3px;border-radius:50%;background:var(--gold);opacity:.7;animation:tw 4s ease-in-out infinite}
+@keyframes tw{50%{opacity:.1;transform:scale(.5)}}
+main{position:relative;z-index:1;width:100%;max-width:560px;text-align:center}
+h1{font-weight:500;font-size:clamp(2rem,7vw,3rem);line-height:1.1;letter-spacing:.01em}
+.urdu{font-family:"Noto Nastaliq Urdu",serif;direction:rtl;line-height:2.1}
+.title-ur{font-size:clamp(1.35rem,5vw,1.9rem);color:var(--gold);margin:6px 0 2px}
+.sub{font-style:italic;font-size:1.2rem;opacity:.85;margin-bottom:18px}
+
+/* mihrab arch frame */
+.arch{
+  position:relative;margin:0 auto;width:min(340px,86vw);aspect-ratio:400/500;
+  border:3px solid var(--gold);border-radius:999px 999px 18px 18px;
+  background:radial-gradient(circle at 50% 30%,#4a3f9c 0%,#2a2570 55%,#1a1750 100%);
+  box-shadow:0 0 0 8px rgba(232,195,106,.15),0 0 60px rgba(244,169,187,.25),inset 0 0 40px rgba(0,0,0,.35);
+  overflow:hidden;cursor:pointer;display:block;padding:0;font:inherit;color:inherit;
+}
+.arch:focus-visible{outline:3px solid var(--rose);outline-offset:6px}
+.arch svg{width:100%;height:100%;display:block}
+.float{animation:fl 5s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-6px)}}
+.blink{transform-box:fill-box;transform-origin:center;animation:bl 5s infinite}
+@keyframes bl{0%,94%,100%{transform:scaleY(1)}97%{transform:scaleY(.08)}}
+.spark{opacity:0;transition:opacity .25s}
+.wow .spark{opacity:1}
+.wow .iris{opacity:0}
+.iris{transition:opacity .25s}
+.wow .blush{opacity:.85}
+.blush{opacity:.5;transition:opacity .3s}
+.hint{margin-top:16px;font-style:italic;font-size:1.15rem;color:var(--rose)}
+.quote{margin-top:22px;min-height:7.5rem;transition:opacity .6s}
+.quote .urdu{font-size:clamp(1.2rem,4.6vw,1.55rem);color:var(--pearl)}
+.quote .en{font-style:italic;opacity:.8;font-size:1.1rem}
+.quote.out{opacity:0}
+
+/* surprise card */
+.card{
+  position:fixed;left:50%;bottom:22px;transform:translate(-50%,140%);z-index:5;
+  width:min(440px,92vw);background:var(--pearl);color:var(--ink);
+  border-radius:22px 22px 14px 14px;padding:20px 22px 18px;text-align:center;
+  border-top:5px solid var(--gold);box-shadow:0 18px 50px rgba(0,0,0,.5);
+  transition:transform .55s cubic-bezier(.2,1.2,.3,1);
+}
+.card.show{transform:translate(-50%,0)}
+.card .urdu{font-size:1.45rem;color:var(--emerald);margin-bottom:2px}
+.card p{font-size:1.2rem;line-height:1.35}
+.card small{display:block;margin-top:10px;font-style:italic;opacity:.6}
+.bit{position:fixed;z-index:6;pointer-events:none;font-size:22px;will-change:transform,opacity}
+footer{position:relative;z-index:1;margin-top:26px;font-style:italic;opacity:.6;font-size:1rem}
+@media (prefers-reduced-motion:reduce){
+  .float,.blink,.stars i{animation:none}
+  .card{transition:none}
+}
+</style>
+</head>
+<body>
+<div class="stars" id="stars" aria-hidden="true"></div>
+
+<main>
+  <h1>You’re too beautiful, Alisha ji</h1>
+  <p class="urdu title-ur">آپ بہت خوبصورت ہیں، علیشا جی</p>
+  <p class="sub">ماشاءاللہ — may every day look as lovely as you do.</p>
+
+  <button class="arch" id="girl" aria-label="Tap Alisha for a surprise">
+    <svg viewBox="0 0 400 500" aria-hidden="true">
+      <defs>
+        <linearGradient id="hj" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#18a090"/><stop offset="1" stop-color="#0b4f54"/></linearGradient>
+        <linearGradient id="hj2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1fb3a1"/><stop offset="1" stop-color="#0d5f60"/></linearGradient>
+        <radialGradient id="ir" cx=".5" cy=".35" r=".8"><stop offset="0" stop-color="#7be0d2"/><stop offset=".5" stop-color="#2a7fb8"/><stop offset="1" stop-color="#3b2a8f"/></radialGradient>
+        <radialGradient id="sk" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#ffeadb"/><stop offset="1" stop-color="#f7cdb6"/></radialGradient>
+        <polygon id="star" points="0,-13 3.5,-4 13,0 3.5,4 0,13 -3.5,4 -13,0 -3.5,-4"/>
+      </defs>
+      <g class="float">
+        <!-- hijab back -->
+        <path d="M200 52C92 52 62 166 72 266 80 356 64 430 40 500H360C336 430 320 356 328 266 338 166 308 52 200 52Z" fill="url(#hj)"/>
+        <path d="M200 52C150 70 120 140 118 230" fill="none" stroke="#2cc2ae" stroke-opacity=".35" stroke-width="3"/>
+        <!-- face -->
+        <ellipse cx="200" cy="252" rx="92" ry="108" fill="url(#sk)"/>
+        <!-- hijab front band over forehead -->
+        <path d="M102 256C96 140 148 112 200 112 252 112 304 140 298 256L292 256C286 204 250 170 200 174 150 170 114 204 108 256Z" fill="url(#hj2)"/>
+        <path d="M108 256C114 204 150 170 200 174 250 170 286 204 292 256" fill="none" stroke="#e8c36a" stroke-width="2" stroke-opacity=".7"/>
+        <!-- chin wrap -->
+        <path d="M108 286C118 344 160 354 200 354 240 354 282 344 292 286 306 380 322 436 344 500H56C78 436 94 380 108 286Z" fill="url(#hj2)"/>
+        <path d="M200 354C150 356 120 380 112 430" fill="none" stroke="#0b4f54" stroke-opacity=".5" stroke-width="3"/>
+        <path d="M200 354C250 356 280 380 288 430" fill="none" stroke="#0b4f54" stroke-opacity=".5" stroke-width="3"/>
+        <!-- crescent pin -->
+        <g transform="translate(262 372)">
+          <path d="M0 -14A14 14 0 1 0 10 10 11 11 0 1 1 0 -14Z" fill="#e8c36a"/>
+          <use href="#star" x="8" y="-4" fill="#e8c36a" transform="scale(.45)"/>
+        </g>
+        <!-- brows -->
+        <path d="M128 212Q158 198 186 210" fill="none" stroke="#5a3a3a" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M214 210Q242 198 272 212" fill="none" stroke="#5a3a3a" stroke-width="3.5" stroke-linecap="round"/>
+        <!-- eyes -->
+        <g class="blink">
+          <g id="eyeL">
+            <ellipse cx="158" cy="254" rx="28" ry="32" fill="#fff"/>
+            <g class="iris">
+              <ellipse cx="158" cy="258" rx="21" ry="26" fill="url(#ir)"/>
+              <ellipse cx="158" cy="260" rx="9" ry="13" fill="#140f3a"/>
+              <circle cx="150" cy="248" r="7" fill="#fff"/><circle cx="168" cy="272" r="3.5" fill="#fff" opacity=".9"/>
+            </g>
+            <use class="spark" href="#star" x="158" y="256" fill="#ffd96b" transform="translate(0 0)"/>
+            <path d="M126 246Q158 218 192 242" fill="none" stroke="#2a1b2a" stroke-width="6" stroke-linecap="round"/>
+            <path d="M126 246L118 240M132 237L125 229" stroke="#2a1b2a" stroke-width="3.5" stroke-linecap="round"/>
+          </g>
+          <g id="eyeR">
+            <ellipse cx="242" cy="254" rx="28" ry="32" fill="#fff"/>
+            <g class="iris">
+              <ellipse cx="242" cy="258" rx="21" ry="26" fill="url(#ir)"/>
+              <ellipse cx="242" cy="260" rx="9" ry="13" fill="#140f3a"/>
+              <circle cx="234" cy="248" r="7" fill="#fff"/><circle cx="252" cy="272" r="3.5" fill="#fff" opacity=".9"/>
+            </g>
+            <use class="spark" href="#star" x="242" y="256" fill="#ffd96b"/>
+            <path d="M208 242Q242 218 274 246" fill="none" stroke="#2a1b2a" stroke-width="6" stroke-linecap="round"/>
+            <path d="M274 246L282 240M268 237L275 229" stroke="#2a1b2a" stroke-width="3.5" stroke-linecap="round"/>
+          </g>
+        </g>
+        <!-- blush, nose, mouth -->
+        <ellipse class="blush" cx="128" cy="296" rx="20" ry="11" fill="#f48aa4"/>
+        <ellipse class="blush" cx="272" cy="296" rx="20" ry="11" fill="#f48aa4"/>
+        <path d="M198 288Q200 293 203 289" fill="none" stroke="#c98d80" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M184 312Q200 328 216 312" fill="#e56a82" stroke="#b9455f" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+      </g>
+      <use href="#star" x="58" y="90" fill="#e8c36a" transform="scale(.9)"/>
+      <use href="#star" x="350" y="130" fill="#f4a9bb" transform="scale(.7)"/>
+    </svg>
+  </button>
+  <p class="hint">tap her — there’s a surprise ✦</p>
+
+  <div class="quote" id="quote" aria-live="polite">
+    <p class="urdu" id="qu"></p><p class="en" id="qe"></p>
+  </div>
+</main>
+
+<div class="card" id="card" role="status"><p class="urdu" id="cu"></p><p id="ce"></p><small>tap anywhere to close</small></div>
+<footer>made with ♥ for Alisha ji</footer>
+
+<script>
+// ---- Edit these texts to personalise ----
+const quotes=[
+ ["ہزاروں خواہشیں ایسی کہ ہر خواہش پہ دم نکلے","A thousand wishes, each one worth a lifetime — Ghalib"],
+ ["خوبصورتی چہرے میں نہیں، سیرت میں ہوتی ہے","Beauty lives in character, not only in the face."],
+ ["مسکراہٹ صدقہ ہے","A smile is charity — and yours is generous."]
+];
+const surprises=[
+ {u:"چاند بھی شرما جائے آپ کو دیکھ کر",e:"Even the moon would blush looking at you, Alisha ji. 🌙",fx:["💖","💗","🌸","✨"]},
+ {u:"ستاروں سے آگے جہاں اور بھی ہیں",e:"“Beyond the stars lie more worlds” — Iqbal. You make this one feel bigger. 🌟",fx:["🌸","🌷","🌺","🪷"]},
+ {u:"ماشاءاللہ، اللہ آپ کو ہمیشہ خوش رکھے",e:"MashaAllah! May Allah keep you smiling always. Ameen 🤲",fx:["⭐","🌙","✨","💛"]}
+];
+// -----------------------------------------
+const $=id=>document.getElementById(id);
+const rm=matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+// background stars
+const st=$("stars");
+for(let i=0;i<50;i++){const s=document.createElement("i");
+  s.style.left=Math.random()*100+"%";s.style.top=Math.random()*100+"%";
+  s.style.animationDelay=Math.random()*4+"s";st.appendChild(s);}
+
+// rotating Urdu quotes
+let qi=0;
+function showQuote(){ $("qu").textContent=quotes[qi][0]; $("qe").textContent=quotes[qi][1]; }
+showQuote();
+setInterval(()=>{const q=$("quote");q.classList.add("out");
+  setTimeout(()=>{qi=(qi+1)%quotes.length;showQuote();q.classList.remove("out");},600);},7000);
+
+// click surprise
+let n=0,closeT;
+function burst(list,count){
+  if(rm)return;
+  const r=$("girl").getBoundingClientRect();
+  const cx=r.left+r.width/2, cy=r.top+r.height*.45;
+  for(let i=0;i<count;i++){
+    const b=document.createElement("span");b.className="bit";
+    b.textContent=list[i%list.length];b.style.left=cx+"px";b.style.top=cy+"px";
+    document.body.appendChild(b);
+    const a=Math.random()*Math.PI*2, d=90+Math.random()*190;
+    const dx=Math.cos(a)*d, dy=Math.sin(a)*d-80;
+    b.animate([
+      {transform:"translate(-50%,-50%) scale(.3)",opacity:1},
+      {transform:`translate(${dx}px,${dy}px) scale(1.2) rotate(${Math.random()*200-100}deg)`,opacity:1,offset:.6},
+      {transform:`translate(${dx*1.1}px,${dy+220}px) scale(.8)`,opacity:0}
+    ],{duration:1600+Math.random()*900,easing:"cubic-bezier(.2,.7,.3,1)"}).onfinish=()=>b.remove();
+  }
+}
+function reveal(){
+  const s=surprises[n%surprises.length]; n++;
+  $("cu").textContent=s.u; $("ce").textContent=s.e;
+  const g=$("girl"); g.classList.add("wow");
+  $("card").classList.add("show");
+  burst(s.fx,34);
+  clearTimeout(closeT);
+  closeT=setTimeout(()=>{g.classList.remove("wow");},2600);
+}
+$("girl").addEventListener("click",e=>{e.stopPropagation();reveal();});
+document.addEventListener("click",()=>$("card").classList.remove("show"));
+</script>
+</body>
+</html>
